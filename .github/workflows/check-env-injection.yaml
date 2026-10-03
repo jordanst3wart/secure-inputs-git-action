@@ -1,6 +1,6 @@
-name: check injection
+name: check injection with environment variable
 
-run-name: check injection
+run-name: check injection with environment variable
 on:
   workflow_dispatch:
     inputs:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: check injection
+      - name: check injection with environment variable
         if: inputs.some-value != ''
         env:
           SOME_VALUE: ${{ inputs.some-value }}
